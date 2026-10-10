@@ -1,0 +1,274 @@
+{
+  "model_cache": {
+    "knn_00ec38079fbf32be": {
+      "status": "success",
+      "identity": "00ec38079fbf32beffcbabeba0f8c5a0a168f8cb303d5574a300d8099814d669",
+      "sha256": "58f151e3c2b673f8099a8e1ac9d739cc27d09ac522bc7730e789764f2e7f3169",
+      "n": 517,
+      "origin": "imported"
+    },
+    "logistic_852b69ea16ad8ae0": {
+      "status": "success",
+      "identity": "852b69ea16ad8ae0754ac8546421176ac6dfacb8f1209352efba08710e62b776",
+      "sha256": "6a3e52ea6c21efa45b29cbb0b4f9ef2343b40d34014e0638bca73b586fca2b73",
+      "n": 517,
+      "origin": "imported"
+    },
+    "rf_4c7c0708842598f6": {
+      "status": "success",
+      "identity": "4c7c0708842598f6b68f4e3146295e5780f0a3dbe2fa5ee4189fc438437503bd",
+      "sha256": "6f860bd0d7f02731142bf9c92f95edead4989ba1246ae3ba3c429ed754c8f86e",
+      "n": 517,
+      "origin": "imported"
+    }
+  },
+  "backtests": {
+    "backtest": {
+      "config": {
+        "initial_equity": 1.0,
+        "fee_one_way": 0.001,
+        "execution": "idealized feature-time close reference",
+        "position": "long BTC for class1, otherwise cash",
+        "shorting": false,
+        "leverage": 1,
+        "cash_interest": 0,
+        "slippage": 0,
+        "final_liquidation": true,
+        "start": "2025-04-01T00:00:00+00:00",
+        "end": "2026-08-31T00:00:00+00:00",
+        "n": 517
+      }
+    }
+  },
+  "config": {
+    "symbol": "BTCUSDT",
+    "market": "spot",
+    "interval": "1d",
+    "months": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08"
+    ],
+    "timeout_seconds": 30,
+    "retries": 2,
+    "update_hours": 24,
+    "feature_columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "return",
+      "quote_asset_volume",
+      "number_of_trades",
+      "taker_buy_base_asset_volume",
+      "taker_buy_quote_asset_volume"
+    ],
+    "window_days": 90,
+    "models": {
+      "logistic": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "solver": "lbfgs"
+      },
+      "knn": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "p": 2,
+        "algorithm": "brute"
+      },
+      "rf": {
+        "n_estimators": 100,
+        "random_state": 42,
+        "n_jobs": 1,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": 1.0,
+        "bootstrap": true
+      }
+    },
+    "source_interval": "1d",
+    "parallel_days": 1,
+    "validation": "rolling",
+    "evaluation_start": "2025-04-01T00:00:00+00:00",
+    "evaluation_end": "2026-09-01T00:00:00+00:00",
+    "experiment_id": "b9ce570233e0cefdb3fd8454ef52f5373a06d48f5dc81053029208eadf84ab42",
+    "dependency_versions": {
+      "python": "3.13.5",
+      "pandas": "2.2.3",
+      "numpy": "2.1.3",
+      "scikit-learn": "1.6.1",
+      "requests": "2.32.3",
+      "matplotlib": "3.10.0"
+    }
+  },
+  "status": {
+    "status": "success",
+    "experiment_id": "b9ce570233e0cefdb3fd8454ef52f5373a06d48f5dc81053029208eadf84ab42",
+    "n": 517,
+    "models": {
+      "logistic": "reused",
+      "knn": "reused",
+      "rf": "reused"
+    }
+  },
+  "download_manifest": [
+    {
+      "month": "2025-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-01.zip",
+      "sha256": "3a3eb1b723d944deb4dbef5ae361bbe39340a17fe987fe22e397ef03dca268d2",
+      "cached": true
+    },
+    {
+      "month": "2025-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-02.zip",
+      "sha256": "27cfde08c9eb8e3801fb049e3be351a3e50ab46abd8553c24023fa98ea5e919e",
+      "cached": true
+    },
+    {
+      "month": "2025-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-03.zip",
+      "sha256": "5874e405f55c46f040de1a8ea9daae583dc12b5bcaef6078b21aae9c627cedcc",
+      "cached": true
+    },
+    {
+      "month": "2025-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-04.zip",
+      "sha256": "8068a571425857cb0f5f71f75e733d3bc1e731362a09f84f835bbea6e087aeb2",
+      "cached": true
+    },
+    {
+      "month": "2025-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-05.zip",
+      "sha256": "2b87aa0c63641ba1e954855bcfed96d7fc4eb21efe7936f354ff74e8e06cfcea",
+      "cached": true
+    },
+    {
+      "month": "2025-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-06.zip",
+      "sha256": "dc4bbe2c75f04372b909febe8e6b379b053f88423d78cdb3ad8b0be3a66d6ede",
+      "cached": true
+    },
+    {
+      "month": "2025-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-07.zip",
+      "sha256": "1ea64a346f6be0aaf455eb1ce107e6d38367164d97d0dd3719b9f9bb239796f4",
+      "cached": true
+    },
+    {
+      "month": "2025-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-08.zip",
+      "sha256": "6720b573210cfbb98765f4a0de6826033d203fda42a6c8364455144b703ceace",
+      "cached": true
+    },
+    {
+      "month": "2025-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-09.zip",
+      "sha256": "9934e6d98a90139039bb070a90ba409ff1832ad80116920adcf088090ce4c996",
+      "cached": true
+    },
+    {
+      "month": "2025-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-10.zip",
+      "sha256": "3597639a18f343c768e374157e8bd08dd046bb33693495ff4e13380abac1260e",
+      "cached": true
+    },
+    {
+      "month": "2025-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-11.zip",
+      "sha256": "9eded1225f9e3f3d4f127fad46111eb403553c1125cf6d11995e69d91d037290",
+      "cached": true
+    },
+    {
+      "month": "2025-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-12.zip",
+      "sha256": "b12a106198f3be3ba5916195f75c1c6d34d8e5302ab77b8fd7c4b1b58b6144f4",
+      "cached": true
+    },
+    {
+      "month": "2026-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-01.zip",
+      "sha256": "b7775ddec3ddd3edafc6ad5abcc94d6ab8b8f063a0911d8a3f3daae6a8bbad2e",
+      "cached": true
+    },
+    {
+      "month": "2026-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-02.zip",
+      "sha256": "f8806308002477a1a28d6cc55ec9ea7bd91bfd4b44c04500d9fc4aec50fd9464",
+      "cached": true
+    },
+    {
+      "month": "2026-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-03.zip",
+      "sha256": "b81fb1942f9653564f355e3bd62dc06e0552d1c64bc966f7dce5a9c1f8780c47",
+      "cached": true
+    },
+    {
+      "month": "2026-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-04.zip",
+      "sha256": "1f7da05da9f9a8f30945bde41872ca649c61d6e6e324e916f4c3cbafa0a9276a",
+      "cached": true
+    },
+    {
+      "month": "2026-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-05.zip",
+      "sha256": "978936e8f1f80b570248f8d4478d6fe08d94b98bc1c7d372feb27573ff466cde",
+      "cached": true
+    },
+    {
+      "month": "2026-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-06.zip",
+      "sha256": "7020d4d850a875b93f0b0fa6df4a4c36ab615273e2ab03f9e896852330dad77e",
+      "cached": true
+    },
+    {
+      "month": "2026-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-07.zip",
+      "sha256": "74ddc3e39aae9445b9f9dae00d53fe2ce6ff503ee469417e207a8f5970bad11a",
+      "cached": true
+    },
+    {
+      "month": "2026-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-08.zip",
+      "sha256": "fd8374a811ac7d3f4144d9c857c4f10796402c178316a25ed0c2f0ca6e16a8c1",
+      "cached": true
+    }
+  ],
+  "data_audit": {
+    "symbol": "BTCUSDT",
+    "market": "spot",
+    "interval": "1d",
+    "price_unit": "USDT/BTC",
+    "volume_unit": "BTC",
+    "timezone": "UTC",
+    "requested_start": "2025-01-01T00:00:00+00:00",
+    "requested_end_exclusive": "2026-09-01T00:00:00+00:00",
+    "actual_start": "2025-01-01T00:00:00+00:00",
+    "actual_last_open": "2026-08-31T00:00:00+00:00",
+    "raw_rows": 608,
+    "actual_rows": 608,
+    "expected_rows": 608,
+    "duplicate_rows": 0,
+    "invalid_rows": 0,
+    "missing_bars": 0,
+    "missing_intervals": [],
+    "valid_samples": 606
+  }
+}

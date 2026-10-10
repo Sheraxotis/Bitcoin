@@ -1,0 +1,76 @@
+{
+  "symbol": "BTCUSDT",
+  "market": "spot",
+  "interval": "1d",
+  "months": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "timeout_seconds": 30,
+  "retries": 2,
+  "update_hours": 24,
+  "feature_columns": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "return",
+    "quote_asset_volume",
+    "number_of_trades",
+    "taker_buy_base_asset_volume",
+    "taker_buy_quote_asset_volume",
+    "return_lag1",
+    "return_7d",
+    "ma_deviation",
+    "volatility",
+    "price_range",
+    "body_ratio",
+    "upper_shadow_ratio",
+    "lower_shadow_ratio",
+    "volume_change",
+    "relative_volume",
+    "taker_buy_ratio"
+  ],
+  "window_days": 90,
+  "models": {
+    "logistic": {
+      "C": 1.0,
+      "max_iter": 2000,
+      "solver": "lbfgs"
+    },
+    "knn": {
+      "n_neighbors": 5,
+      "weights": "uniform",
+      "p": 2,
+      "algorithm": "brute"
+    },
+    "rf": {
+      "n_estimators": 100,
+      "random_state": 42,
+      "n_jobs": 1,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "max_features": 1.0,
+      "bootstrap": true
+    }
+  }
+}

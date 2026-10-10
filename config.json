@@ -1,0 +1,9 @@
+{
+  "symbol": "BTCUSDT",
+  "market": "spot",
+  "interval": "15m",
+  "months": ["2026-07", "2026-08"],
+  "window_days": 31,
+  "timeout_seconds": 30,
+  "retries": 2
+}

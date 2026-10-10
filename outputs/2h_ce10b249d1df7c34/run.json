@@ -1,0 +1,268 @@
+{
+  "config": {
+    "symbol": "BTCUSDT",
+    "market": "spot",
+    "interval": "2h",
+    "months": [
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12"
+    ],
+    "timeout_seconds": 30,
+    "retries": 2,
+    "update_hours": 24,
+    "feature_columns": [
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "return",
+      "quote_asset_volume",
+      "number_of_trades",
+      "taker_buy_base_asset_volume",
+      "taker_buy_quote_asset_volume",
+      "return_lag1",
+      "return_7d",
+      "ma_deviation",
+      "volatility",
+      "price_range",
+      "body_ratio",
+      "upper_shadow_ratio",
+      "lower_shadow_ratio",
+      "volume_change",
+      "relative_volume",
+      "taker_buy_ratio"
+    ],
+    "window_days": 90,
+    "models": {
+      "logistic": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "solver": "lbfgs"
+      },
+      "knn": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "p": 2,
+        "algorithm": "brute"
+      },
+      "rf": {
+        "n_estimators": 100,
+        "random_state": 42,
+        "n_jobs": 1,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "max_features": 1.0,
+        "bootstrap": true
+      },
+      "logistic_pca": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "solver": "lbfgs",
+        "pca_n_components": 0.95
+      },
+      "knn_pca": {
+        "n_neighbors": 5,
+        "weights": "uniform",
+        "p": 2,
+        "algorithm": "brute",
+        "pca_n_components": 0.95
+      }
+    },
+    "parallel_days": 4,
+    "evaluation_start": "2025-01-01T00:00:00+00:00",
+    "evaluation_end": "2026-01-01T00:00:00+00:00",
+    "source_interval": "2h",
+    "validation": "rolling",
+    "experiment_id": "ce10b249d1df7c34a0a07179e31581a39df7bb62f77b2d4a611dbc2f8ecb45e0",
+    "dependency_versions": {
+      "python": "3.13.5",
+      "pandas": "2.2.3",
+      "numpy": "2.1.3",
+      "scikit-learn": "1.6.1",
+      "requests": "2.32.3",
+      "matplotlib": "3.10.0"
+    }
+  },
+  "status": {
+    "status": "success",
+    "experiment_id": "ce10b249d1df7c34a0a07179e31581a39df7bb62f77b2d4a611dbc2f8ecb45e0",
+    "n": 4379,
+    "models": {
+      "logistic": "reused",
+      "knn": "reused",
+      "rf": "reused",
+      "logistic_pca": "trained",
+      "knn_pca": "trained"
+    }
+  },
+  "download_manifest": [
+    {
+      "month": "2024-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2024-09.zip",
+      "sha256": "2f88c35fa1537f78487624c0d98dc20a7c035a6432475da85b3a34835e0a955e",
+      "cached": true
+    },
+    {
+      "month": "2024-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2024-10.zip",
+      "sha256": "65d7131402d7ba2b3d7d21b9df5a429be3a3895b17e6c3bd06a2659d480f37df",
+      "cached": true
+    },
+    {
+      "month": "2024-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2024-11.zip",
+      "sha256": "30e1af992b39011a4ceb61604667697b6996dc3e7ff95f3f2c33beeb88bb25c3",
+      "cached": true
+    },
+    {
+      "month": "2024-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2024-12.zip",
+      "sha256": "c9b179b1f428facc9574bef29ed75d10804eaf24ac263145c114562944ad9820",
+      "cached": true
+    },
+    {
+      "month": "2025-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-01.zip",
+      "sha256": "ef21624f258dd7ca30b2ecf4b7babd3451a0f0fa9a84a89993518199d415ea38",
+      "cached": true
+    },
+    {
+      "month": "2025-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-02.zip",
+      "sha256": "acc32a504247e37ddaff9a8924ce19f0416384c707ceba1656a465ab85512317",
+      "cached": true
+    },
+    {
+      "month": "2025-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-03.zip",
+      "sha256": "7021f1cf20274ef19c6c60205a7717b9279a8bab300c1313d65aa4b3fc54bacf",
+      "cached": true
+    },
+    {
+      "month": "2025-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-04.zip",
+      "sha256": "2832c00b88bd19058c1fc484c22d691f381f002b5fd4a0024eb22d607f20bbf1",
+      "cached": true
+    },
+    {
+      "month": "2025-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-05.zip",
+      "sha256": "68b6fd4f72b59433ef191f0f5779a5a4434829089e15995deac31e76ac29dc61",
+      "cached": true
+    },
+    {
+      "month": "2025-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-06.zip",
+      "sha256": "bfcf387c3d416bd3311f36dfa125a958c48026d8fa7069ed4094daac736a4981",
+      "cached": true
+    },
+    {
+      "month": "2025-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-07.zip",
+      "sha256": "ce2cbf01ab42c0998b64d89b596d89fd31f16e7bdaf4fe619447cf2c7cc4e9bb",
+      "cached": true
+    },
+    {
+      "month": "2025-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-08.zip",
+      "sha256": "ed21d38392d486e2dadd8c0e286bf9764cf56d377d015031c6263f760370d93e",
+      "cached": true
+    },
+    {
+      "month": "2025-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-09.zip",
+      "sha256": "c324bc06988241a4f06df392e268e247ef28b696c4297aa61691d22e1d771b2d",
+      "cached": true
+    },
+    {
+      "month": "2025-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-10.zip",
+      "sha256": "be6e4a730315c75c1748a740353293bc577a5930a05008b66489a6977463337e",
+      "cached": true
+    },
+    {
+      "month": "2025-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-11.zip",
+      "sha256": "9426d1eefbc25deb389dd7327289691125ac39a2512b5141503a274d782f39ae",
+      "cached": true
+    },
+    {
+      "month": "2025-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/2h/BTCUSDT-2h-2025-12.zip",
+      "sha256": "9714aec1a8c505dd413e5cd11297d718f94acaef59436543c792c9b7f917e40d",
+      "cached": true
+    }
+  ],
+  "data_audit": {
+    "symbol": "BTCUSDT",
+    "market": "spot",
+    "interval": "2h",
+    "price_unit": "USDT/BTC",
+    "volume_unit": "BTC",
+    "timezone": "UTC",
+    "requested_start": "2024-09-01T00:00:00+00:00",
+    "requested_end_exclusive": "2026-01-01T00:00:00+00:00",
+    "actual_start": "2024-09-01T00:00:00+00:00",
+    "actual_last_open": "2025-12-31T22:00:00+00:00",
+    "raw_rows": 5844,
+    "actual_rows": 5844,
+    "expected_rows": 5844,
+    "duplicate_rows": 0,
+    "invalid_rows": 0,
+    "missing_bars": 0,
+    "missing_intervals": [],
+    "valid_samples": 5759
+  },
+  "model_cache": {
+    "logistic_2ea7ad7cae02847a": {
+      "status": "success",
+      "identity": "2ea7ad7cae02847aa7e30261d828bd44aea8efdd06e60544a112cf267cc1882d",
+      "sha256": "5e7238c60b4919c62b55c12e19701a96ee90bb78c9f7479e625b8a13ee5135c3",
+      "n": 4379,
+      "origin": "trained"
+    },
+    "knn_f5cb762cc34f5ef0": {
+      "status": "success",
+      "identity": "f5cb762cc34f5ef0c28b3e6fbdc710b790f608fdb0969eeeb113db82c23db93e",
+      "sha256": "d94cb8f124448bec931c63bfd52e3d6e49a9ea2e372ec1957e7edced868ab4c3",
+      "n": 4379,
+      "origin": "trained"
+    },
+    "rf_05f25153cba550db": {
+      "status": "success",
+      "identity": "05f25153cba550db9de2e977fb4ec7f3087106d1a7c0a8c45245d0c8253e2996",
+      "sha256": "5ed83fb209eb02a335f8e3ae0480fa27821470b89107fe8e96fa8969f4e6d9de",
+      "n": 4379,
+      "origin": "trained"
+    },
+    "logistic_pca_6d8c9dcbe6249fa3": {
+      "status": "success",
+      "identity": "6d8c9dcbe6249fa3489869609160a65080e37d0752ba43ebba544679767895dd",
+      "sha256": "4a9d9105303572d1bdbf1c81397f52f685e118e1a9c41d777caa969a5023fe01",
+      "n": 4379,
+      "origin": "trained"
+    },
+    "knn_pca_305198263a3fb67f": {
+      "status": "success",
+      "identity": "305198263a3fb67f0a027d9ed3ecb7c88a7b94a2086aae86d0273b38725ccc07",
+      "sha256": "8cf52b16e7642ebbde5aa24308015e4744f9dd748a4be3580d5461fbdb03bb6a",
+      "n": 4379,
+      "origin": "trained"
+    }
+  }
+}
